@@ -28,5 +28,3 @@ Ensure you have the following installed:
 - The tinytex (or LayTex) package for PDF generation:
 
 Feel free to provide feedback or suggestions directly via email or GitHub issues.
-
-[Thesis.pdf](https://github.com/user-attachments/files/18101934/Thesis.pdf)
