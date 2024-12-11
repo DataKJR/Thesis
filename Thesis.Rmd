@@ -1,0 +1,59 @@
+---
+title: "Thesis - StrongHER Project: Exploring the Impact of Nutrition on Bone Health in Female Athletes"
+
+author: | 
+  Principal Investigator: Katriona Ross  
+  Co-Investigator(s):  
+  Dr Fergus Guppy (Associate Professor)  
+  Dr Hannah Lithgow (Assistant Professor)  
+  Dr David King (Assistant Professor)
+institution: "Heriot-Watt University"
+date: "2024-12-11"
+output: pdf_document
+pdf_document:
+    citation_package: bibtex
+    toc: true
+    toc_depth: 2
+    number_sections: true
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction 
+
+## What is already known/reported on this topic? 
+
+1. It is known that low energy availability (LEA) because of insufficient calorie intake or over training can lead to amenorrhea and bone health conditions such as low bone mineral density (BMD) or osteoporosis long term.  
+
+2. It is known that inadequate intake of essential nutrients such as calcium, vitamin D will significantly affect BMD.  
+
+3. It is known that both LEA and poor micronutrient intakes are common in female athletes who are at further increased risk if they are training indoors or live in norther latitudes.  
+
+## What could this study add?  
+
+1. Longitudinal data tracking changes in bone health, energy availability and nutrient intakes over time.  
+2. More high-quality research in female athletes, an understudied population.
+3. Research across different sporting populations i.e. indoor vs outdoor, impact vs non-impact. 
+4. Investigate the efficacy and use of BIA for early detection of LEA compared to currently used diagnostic criteria.  
+5. Could help identify potential future interventions for nutrition in female athletes for improved bone health and energy availability.  
+
+## Potential for this study to affect practice, research or policy 
+
+The proposed study holds significant implications for advancing our understanding of energy availability (EA), micronutrient status and bone health in female athletes. By addressing these critical gaps in knowledge, the research aims to optimise both health and performance outcomes. The findings will not only contribute to academic knowledge but also provide practical insights for coaches, nutritionists, and practitioners working with female athletes. 
+
+# Background & Rationale 
+
+Research shows a substantial under-representation of women with only 6-12% of all studies utilising female-only participants [@cowley_invisible_2021; @hutchins_female_2021]. Furthermore, only 10% of the studies used elite or highly trained athletes [@smith_managing_2022]. This underrepresentation of female athletes in sport science and sport medicine (SSSM) research may have significant implications on our understanding of the unique physiological factors impacting female athlete health and performance. Additionally, the methodological quality of studies conducted on female athletes has been compromised due to historical neglect and a lack of understanding of reproductive endocrinology. Traditionally, sport and exercise science data have primarily originated from studies involving male participants, resulting in a dearth of high-quality data applicable to female athletes [@elliott-sale_methodological_2021]. Applying evidence developed based on male athlete research to female cohorts may be erroneous and with significant challenges (Emmonds et al., 2019) 
+
+Therefore, one of the aims of this study is to produce high-quality female-specific data through a more comprehensive and tailored approach to research, ultimately contributing to a more robust understanding of the unique physiological considerations in female athletes. 
+
+## Overview of Bone Health in Female Athletes 
+
+
+```{r cars}
+
+```
+
