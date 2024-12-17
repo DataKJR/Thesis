@@ -1,21 +1,23 @@
 ---
 title: "Thesis - StrongHER Project: Exploring the Impact of Nutrition on Bone Health in Female Athletes"
-
-author: | 
+author: |
   Principal Investigator: Katriona Ross  
   Co-Investigator(s):  
   Dr Fergus Guppy (Associate Professor)  
   Dr Hannah Lithgow (Assistant Professor)  
   Dr David King (Assistant Professor)
-institution: "Heriot-Watt University"
 date: "2024-12-11"
-output: pdf_document
-pdf_document:
-    citation_package: bibtex
+institution: "Heriot-Watt University"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    citation_package: default
+    df_print: paged
     toc: true
     toc_depth: 2
     number_sections: true
-bibliography: references.bib
+bibliography: references1.bib
+
 ---
 
 ```{r setup, include=FALSE}
@@ -34,10 +36,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## What could this study add?  
 
-1. Longitudinal data tracking changes in bone health, energy availability and nutrient intakes over time.  
+1. Longitudinal data tracking changes in bone health, energy availability and nutrient intakes over time.
+
 2. More high-quality research in female athletes, an understudied population.
+
 3. Research across different sporting populations i.e. indoor vs outdoor, impact vs non-impact. 
-4. Investigate the efficacy and use of BIA for early detection of LEA compared to currently used diagnostic criteria.  
+
+4. Investigate the efficacy and use of BIA for early detection of LEA compared to currently used diagnostic criteria.
+
 5. Could help identify potential future interventions for nutrition in female athletes for improved bone health and energy availability.  
 
 ## Potential for this study to affect practice, research or policy 
@@ -46,14 +52,157 @@ The proposed study holds significant implications for advancing our understandin
 
 # Background & Rationale 
 
-Research shows a substantial under-representation of women with only 6-12% of all studies utilising female-only participants [@cowley_invisible_2021; @hutchins_female_2021]. Furthermore, only 10% of the studies used elite or highly trained athletes [@smith_managing_2022]. This underrepresentation of female athletes in sport science and sport medicine (SSSM) research may have significant implications on our understanding of the unique physiological factors impacting female athlete health and performance. Additionally, the methodological quality of studies conducted on female athletes has been compromised due to historical neglect and a lack of understanding of reproductive endocrinology. Traditionally, sport and exercise science data have primarily originated from studies involving male participants, resulting in a dearth of high-quality data applicable to female athletes [@elliott-sale_methodological_2021]. Applying evidence developed based on male athlete research to female cohorts may be erroneous and with significant challenges (Emmonds et al., 2019) 
+Research shows a substantial under-representation of women with only 6-12% of all studies utilising female-only participants [@cowley_invisible_2021; @hutchins_female_2021]. Furthermore, only 10% of the studies used elite or highly trained athletes [@smith_managing_2022]. This underrepresentation of female athletes in sport science and sport medicine (SSSM) research may have significant implications on our understanding of the unique physiological factors impacting female athlete health and performance. Additionally, the methodological quality of studies conducted on female athletes has been compromised due to historical neglect and a lack of understanding of reproductive endocrinology. Traditionally, sport and exercise science data have primarily originated from studies involving male participants, resulting in a dearth of high-quality data applicable to female athletes [@elliott-sale_methodological_2021]. Applying evidence developed based on male athlete research to female cohorts may be erroneous and with significant challenges [@emmonds_challenge_2019]
 
 Therefore, one of the aims of this study is to produce high-quality female-specific data through a more comprehensive and tailored approach to research, ultimately contributing to a more robust understanding of the unique physiological considerations in female athletes. 
 
 ## Overview of Bone Health in Female Athletes 
 
+Athletes, particularly female athletes are at increased risk of developing bone injuries and bone-related conditions, such as stress fractures, osteoporosis and osteopenia due to imbalance between training and recovery [@goolsby_bone_2017]. Bone health is multifactorial, adequate nutrition, sufficient mechanical stimulus, hormonal, genetic and environmental factors all playing a role in achieving and maintaining optimal bone health in athletes.  The primary concern for athletes and support staff being the avoidance of injury as this will directly influence performance. In addition to affecting athletic performance, optimal bone health is essential for long-term well-being of female athletes as poor bone health can lead to more chronic conditions later in life.  
 
-```{r cars}
+At present, osteoporosis affects 1 in 3 women compared to 1 in 5 men. Additionally, the number of hip fractures in the UK due to osteoporosis has risen from 70,000 in 2006 to 100,000 in 2020, an increase of 44% [@stevenson_prevention_2023]. Consequently, there is both a significant economic burden and a clear impact on the quality of life of those affected. The heightened vulnerability of female athletes to bone injuries and related conditions underscores the crucial role of nutrition in fostering optimal bone health. 
 
-```
+Stress fractures and bone stress injuries, resulting from overuse and increased mechanical loading are common in many sports [@mcbryde_stress_1985], with these injuries being complex and not completely understood, current evidence suggests that dietary restraint, suboptimal vitamin D status (<30ng/ml) and menstrual dysfunction are risk factors for sustaining bone stress injuries [@barrack_higher_2014; @bishop_bone_2021; @neal_review_2015]. Vitamin D plays a crucial role in calcium absorption and bone metabolism making it a key nutrient for bone health.  
+
+**Explain here some context of why BMD is a useful marker of skeletal health would be useful
+
+The interplay between diet and exercise training is  also critical in better understanding the long-term bone health of retired athletes, with the avoidance of conditions such as osteopenia and osteoporosis crucial in maintaining a healthy lifespan in this population. This involves maximising peak bone mineral density (BMD), which relates to the strength of the internal bone tissue, in relation to microarchitecture and geometry and managing the rate of bone loss with increasing age [@bailey_exercise_2008]. As ninety percent of peak bone mass is accrued by age 20 and then, after a period of stability BMD will begin to decline as women reach their late 30’s. Men not only exhibit higher total BMD but are also less susceptible to age related bone loss than women [@santos_exercise_2017]. Although very little research has been completed on athletes’ long term bone health post career, studies suggest that athletes maintain higher bone density than controls [@bass_exercise_1998; @kirchner_effect_1996]. A detraining study in former female gymnasts found that at follow up, BMD remained 16% greater than controls at the proximal femur and 5% in the total body  but not different at the lumbar spine [@kudlac_impact_2004]. The rate of BMD change per year was also only greater between groups at the lumbar spine (gymnasts: -0.8% vs controls: 0.2%), highlighting the importance of maximising premenopausal BMD to reduce the risk of osteoporosis and fractures later in life.  
+
+While various dietary and nutritional practices have been proposed to improve bone health in athletes, including vitamin D and calcium supplementation, the female-specific effects of micronutrients on bone health in female athletes remain unclear [@sale_nutrition_2019, @smith_managing_2022]. An audit of studies supporting the use of calcium, iron and vitamin D found that only 32% of studies defined menstrual status, with none implementing best practice protocols. 
+
+## Importance of Vitamin D in Bone Health 
+
+Vitamin D is synthesised in the skin when exposed to sunlight. Ultraviolet-B (UVB) radiation converts 7-dehydrocholesterol into vitamin D3 (Cholecalciferol). This newly synthesised vitamin D is then transported to the liver by Vitamin D binding protein (VDBP). In the liver, it is converted to 25(OH)D, which is the main storage form of vitamin D. In the kidney, further activation occurs, resulting in 1,25(OH)2D, the active form. This activation is driven by parathyroid hormone (PTH) when blood calcium and/or phosphate concentrations fall below normal ranges. 
+
+There are two main types of vitamin D that are available in the diet: cholecalciferol (vitamin D3) and ergocalciferol (vitamin D2). Cholecalciferol is synthesised in the skin when exposed to sunlight and is also found in animal-based food sources such as fatty fish and fish liver oils. Ergocalciferol, on the other hand, is derived from plants and is found in foods such as mushrooms exposed to ultraviolet light and fortified plant-based milk alternatives. Both cholecalciferol and ergocalciferol, can contribute to the body's vitamin D levels when consumed through the diet. These are well absorbed (bioavailability of 50%) especially when consumed along with dietary lipids [@larson-meyer_importance_2015]
+
+Vitamin D plays a crucial role in bone health by facilitating calcium absorption in the gut and helping maintain adequate serum calcium and phosphate concentrations for normal bone mineralisation. Vitamin D also plays a role in the prevention of rickets in children, osteomalacia in adults and in conjunction with calcium helps prevent the onset of osteoporosis in older adults [@holick_vitamin_2007]. 
+
+## Prevalence of Vitamin D Deficiency in Female Athletes
+
+The prevalence of vitamin D deficiency among athletes varies based on factors such as season, training location, sport [@larson-meyer_vitamin_2010], and skin colour [@hamilton_vitamin_2010]. Several studies have highlighted the common issue of vitamin D deficiency in athletes. Seasonal variation of serum vitamin D (25 (OH) D) was measured in elite male athletes and over 65% of participants had insufficient (<50nmol/L) levels during the winter [@morton_seasonal_2012]. Similarly, UK university athletes, especially those who spend significant time indoors, are at risk of vitamin D deficiency, emphasising the need for further research to understand its implications on their health and performance [@wilson-barnes_seasonal_2020]. Adolescent female soccer players were also found to have insufficient levels of vitamin D with a mean value of all participants reported to be 50.5 ± 12.8 nmol/L [@brannstrom_vitamin_2016]. Jakše et al. [-@jakse_nutritional_2021] reported that only 32.3% of athletes had sufficient levels of 25(OH)D (>75 nmol/L), with gymnasts exhibiting lower sufficiency compared to swimmers (24% in gymnasts vs 43% in swimmers). These findings highlight the importance of interventions to address vitamin D deficiency among athletes. 
+
+## Effects of Vitamin D on Bone Health in Female Athletes 
+
+Optimal vitamin D levels are essential for individuals, with particular significance for female athletes. Beyond its established role in calcium absorption and skeletal health, recent research highlights the broader implications of sufficient vitamin D status for athletes. Maintaining adequate vitamin D levels has been linked to improved muscle function, reduced inflammation, and enhanced immune response, crucial factors in achieving peak athletic performance [@berry_vitamin_2011; @close_assessment_2012; @owens_vitamin_2018].   
+
+The evidence demonstrating the relationship between vitamin D and lower body muscle strength and power is mixed. Some papers found no effect of vitamin D on muscle strength or power [@bezuglov_does_2023; @close_assessment_2012; @jastrzebska_effect_2016; @todd_vitamin_2017) whereas others found opposite effects (@alimoradi_efficacy_2019; @close_effects_2013; @jung_correcting_2018; @rockwell_effects_2020; @wyon_acute_2016; @wyon_effect_2019). To the authors knowledge, there were only seven papers who used female participants in varying percentages (40% to 69%) with one not even disclosing the sex of the participants involved. However, none used exclusively female participants. This is a significant gap in the literature and one this study aims to fill.  
+
+For female athletes, the importance of optimising vitamin D levels extends to hormonal regulation, including potential effects on oestrogen levels [@chu_relationship_2021]. This connection may influence menstrual regularity and bone health, addressing concerns, related to relative energy deficiency in sport (RED-s). Furthermore, there is evidence that vitamin D may affect fertility. There are vitamin D receptors (VDRs) present in the ovaries and uterus, suggesting a direct role in the reproductive process [@lerchbaum_vitamin_2012]. In this context, elevating vitamin D levels is crucial for female athletes as part of a comprehensive strategy to support musculoskeletal performance, hormonal balance, and overall well-being, contributing to sustained athletic excellence and long-term health. 
+
+## Bone Turnover Markers and Stress Fracture Risk 
+
+Vitamin D is primarily known for its role in supporting calcium absorption, and low mechanistic action of vitamin D explains why low circulating levels can reduce bone strength and increase stress fracture risk. Low levels of 25(OH)D normally accompany low calcium levels, resulting in PTH secretion to meet the demand. This results in increased bone turnover, reduced bone mass and potentially increased risk of stress fracture, especially in athletes [@yague_role_2020]. Most of the research in this area has been undertaken in the military. Stress fracture incidence in recruits has been estimated between 0.2% and 5.2% in men and 1.6% and 30% in women [@ribbans_vitamin_2021]. Vitamin D deficiency has been associated with stress fractures in female athletes [@jakobsen_association_2021; @knechtle_vitamin_2021; @millward_association_2020; @moreira_stress_2017]. Moreover, supplementation with vitamin D, often in combination with calcium is shown to reduce the risk of stress fracture in female athletes [@lappe_calcium_2008; @millward_association_2020; @tenforde_evaluating_2010]. This highlights the importance of vitamin D in maintaining bone strength and reducing injury risk in all athletes, especially female athletes.  
+
+## Biological Differences
+
+There are clear biological differences between males and females that extend beyond reproductive functions. These differences include variations in hormone levels, body composition, and musculoskeletal structure. These biological differences play a crucial role in influencing the nutritional needs and metabolic processes of female athletes [@chen_sex_2022]. Understanding these differences is essential for developing tailored dietary and training strategies that optimise performance and promote long-term health in female athletes. 
+
+Female athletes typically exhibit elevated body fat levels compared to their male counterparts, whereas males typically possess greater lean body mass and muscle mass. These variations in body composition can influence bone health in female athletes [@sanborn_physiologic_1994]. For example, differences in fat mass and lean body mass may impact how bones are mechanically loaded during physical activity, which can then affect bone remodelling processes [@jurimae_effects_2018]. Furthermore, variations in body fat percentage may influence hormonal regulation, particularly oestrogen levels, which are pivotal in bone metabolism [@mair_obesity_2020; @narla_bones_2018). Thus, a comprehensive understanding of these sex-specific differences is crucial for developing targeted interventions to optimise bone health and energy balance among female athletes, ultimately improving their overall performance and wellbeing. 
+
+Research consistently demonstrates that males typically have a higher resting metabolic rate (RMR) and total energy expenditure compared to females, again this is largely attributed to differences in body mass and body composition [@arciero_resting_1993; @jagim_sex_2023]. The differences in RMR and exercise energy expenditure between males and females can create significant differences in total energy demands and the necessary energy intakes. These differences can lead to instances of inadequate energy availability (EA), which can negatively influence physiological functions, including bone metabolism [@sale_nutrition_2019]. By measuring both RMR and assessing energy expenditure, this study aims to elucidate how these variances may influence EA and, consequently, bone health in female athletes.  
+
+EA is defined as energy intake (EI) less exercise energy expenditure (EEE) relative to fat free mass (FFM) (EA = (EI-EEE)/FFM). EI is assessed by measuring total caloric intake from all food and drink consumed. Common methods of measurement include 24-hour dietary recall, food frequency questionnaires and food diaries. Among these methods, weighted food diaries, if completed correctly allow for accurate estimation of energy intake. They provide the researcher or practitioner with detailed quantitative information of macro and micronutrient intakes. However, this methodology does have significant limitations. The process is incredibly time consuming and the burden of weighing and recording every single food item can lead to poor compliance especially during busy training periods. As with most methods of dietary analysis the potential for underreporting food intake or altering their eating habits is a possibility. Despite the time-consuming nature for the participants, weighted food records show high rates of accuracy and reliability [@thompson_dietary_2017] and with sufficient education and support throughout the process it is a method that can be successfully implemented in an athletic population.  
+
+EEE represents the amount of energy used during physical activity. This is estimated through accelerometery devices, heart rate (HR) monitoring or indirect calorimetry during exercise. The final component, FFM can be calculated using whole body dual X-ray absorptiometry (DXA) scanners, bioelectrical impedance analysis (BIA) or skinfold callipers. As a critical variable in the EA equation, FFM is measured most accurately using the gold standard method, DXA scan [@nana_methodology_2015]. 
+
+Although not directly included in the EA equation, RMR is a key component in calculating EA, representing the energy needed to maintain vital physiological functions at rest and the main contributor to total daily energy expenditure (TDEE). Accurate measurement of RMR helps improve TDEE estimates, leading to more precise calculations of EA. 
+
+Understanding the interplay between EA and bone health will help both researchers and practitioners to identify risk factors and prevention strategies for low energy availability (LEA) and support skeletal health in female athletes, therefore, enhancing performance and minimising the risk of bone-related injuries and conditions. 
+ 
+Studying the hormonal differences in male and female athletes, both throughout the menstrual cycle and in everyday life, is crucial for researchers to develop a thorough understanding of female athletes. Females experience cyclical fluctuations in oestrogen and progesterone levels throughout the menstrual cycle, which can influence bone density and strength [@rugvedh_menstrual_2023]. Additionally, differences in baseline hormonal profiles between males and females, such as higher levels of testosterone in males and fluctuations in insulin and leptin levels, contribute to variations in body composition, metabolic rate, and energy balance [@lundsgaard_gender_2014]. These hormonal differences have direct implications for bone mineral density in female athletes [@gruodyte_adipocytokines_2010]. Therefore, any study using a female athlete population should aim to measure these variables.  
+
+Considering the evident biological differences between males and females, with distinct implications for nutrition, it is crucial to acknowledge these sex-based differences in the context of female athlete research. There is a clear need for female athlete-specific research to ensure there is adequate support for both their health and performance. 
+
+## Energy Availability and Relative Energy Deficiency in Sport (RED-S)
+
+Conducting a study exploring the influence of nutrition on female athlete bone health stems from the critical importance of increasing our understanding of these interconnected factors in optimising athletic performance and preventing long-term bone health issues (e.g. risk of osteoporosis and osteopenia). Female athletes often face unique challenges related to bone health and nutrition, specifically related to EA. Intense physical training and inadequate nutrition may contribute to the development of RED-S. The term RED-S was introduced in 2014 as a replacement for the previous term Female Athlete Triad, as it was found to affect both males and females. Although this thesis will include literature based on the previous model, for the purposes of this thesis it will be referred to as RED-S. Since then, over 170 research publications have been published to advance the field, leading to updated conceptual models and definitions. The current definition of RED-S is: 
+ 
+  “A syndrome of impaired physiological and/or psychological functioning experienced by both female and male athletes. It is caused by exposure to problematic (prolonged and/or severe) LEA. The detrimental outcomes include, but are not limited to, decreases in energy metabolism, reproductive function, musculoskeletal health, immunity, glycogen synthesis, and cardiovascular and haematological health. These outcomes can individually and synergistically lead to impaired well-being, increased injury risk, and decreased sports performance.” 
+
+ 
+Understanding the dynamic interplay between bone health, EA, and micronutrient status over time is crucial for developing targeted interventions and preventive strategies to safeguard the well-being and performance of female athletes and informing best practice in performance sport. 
+ 
+The risks of sustained periods of LEA are clear, with no positive outcomes. In terms of bone health, an energy deficit can disrupt hormones, decrease osteoblast activity, and increase bone resorption. This imbalance in bone turnover can then reduce the capacity to lay down newly formed bone and impair the ability to repair micro damage [@barrack_higher_2014]. Areta et al., [-@areta_low_2021] highlighted that LEA results in greater suppression of markers of bone formation and increased markers of bone resorption and this effect has been documented in females but not in males. These responses are thought to precede the clinical complications, reproductive function impairment, stress fractures, loss of muscle mass and impaired physical capacity. Early findings suggest that men may be less sensitive to reductions in EA than females however, most studies reviewed were short term (< 5 days)[@ihle_dose-response_2004; @loucks_induction_1994; @papageorgiou_effects_2017; @papageorgiou_bone_2018].  
+
+Current understanding is that any drop in energy availability below a threshold of 30kcal/kg/FFM per day in females is sub-optimal and going to result in an acute disruption of normal hormonal, endocrine, physiological and metabolic function [@areta_low_2021].   
+## Need for Reliable Tools to Identify Athletes at Risk of LEA and RED-S
+
+Detecting those athletes at risk of LEA as early as possible is key to avoiding negative health consequences in the future. Therefore, necessary tools for screening are required. Questionnaires present a practical, non-invasive and time effective method of screening athletes. Various questionnaires currently exist such as the Eating Disorder Examination Questionnaire (EDE-Q), Brief Eating Disorder in Athletes Questionnaire (BEDA-Q), RED-S Specific Screening Tool (RST) and Three Factor Eating Questionnaire (TFEQ). However, many of these tools such as the BEDA-Q were not designed specifically for female athletes and have limitations. For example, the EDE-Q cut-off scores may vary between sexes and its reliance on behavioural indicators limits the ability to detect the full scope of LEA and RED-S [@sim_review_2021] The Low Energy Availability in Females Questionnaire (LEAF-Q) is a validated questionnaire that focusses specifically on female athletes' health and performance. The LEAF-Q has been validated in studies with elite and highly trained populations in sports such as triathlon [@witkos_low_2023], dance, endurance, [@melin_leaf_2014] and combat sports [@rogers_utility_2021]. It has a 90% specificity and 78% sensitivity in successfully identifying RED-S. Developed by Melin et al., 2014, the LEAF-Q assesses menstrual function, gastrointestinal health and injuries, factors all strongly linked to the development of LEA and RED-S. A criticism of the LEAF-Q is that it does not consider EEE. While this tool should not be used to diagnose LEA or RED-S, it may provide additional context for researchers and practitioners in order to conduct further investigations i.e. clinical testing. Prior to 2015 LEA was predominantly identified by using a combination of weighted food diaries and training logs in conjunction with heart rate or accelerometery data. Since then, it has been established that LEA can be easily and accurately identified utilising surrogate markers such as RMR ratio, LEAF-Q and biomarker analysis [@logue_low_2020; @heikura_low_2018).  
+
+## Prevalence of RED-S in Female Athletes 
+
+Symptoms of RED-S and LEA were more prevalent amongst professional female athletes compared to sedentary, recreationally active controls [@skarakis_energy_2021].  
+| 
+** Could add in BIA section and Phase Angle here too
+
+## Leptin and It's Role as a Biomarker of Energy Availability 
+
+Leptin, a key hormone produced by adipose tissue, regulates energy balance, metabolism, immune function and other systems by influencing hypothalamic control and exerting effects on peripheral tissues [@park_physiology_2015]. Leptin is correlated with body fat mass and nutritional status, indicating energy availability or deficiency in the body.  
+
+Evidence suggests that leptin fluctuates in line with menstrual cycle phases, particularly in naturally menstruating individuals which may reflect underlying changes in energy balance and metabolism.  Lofberg et al.[-@lofberg_resting_2024] compared the effects of endogenous and exogenous female sex hormones on resting energy expenditure and metabolic hormones in two hormonally distinct groups. Leptin levels were significantly lower in the luteal phase, compared to the follicular phase, aligning with simultaneous reductions in T3. This was despite an overall increase in REE.  
+
+Athletes with menstrual disorders have decreased T3 and REE which may indicate LEA [@moto_resting_2022]. Similarly, many studies measuring leptin in states of LEA show a decrease with values below 30kcal/kg/FFM independent of whether it is achieved through exercise or food restriction [@areta_low_2021]. Insulin is a downstream marker of leptin and suggested to play a role in sensing energy balance within the body and be a determinant of BMD in females [@maya_female_2022].   
+
+Bone health can be significantly impacted by the reduction in leptin caused by LEA. Reduced leptin levels, results in a two-fold effect, in that, bone resorption increases, and formation is decreased, which leads to greater losses in bone density and higher risk of injury and fracture.  
+
+## Leptin's Role in Bone Metabolism
+
+A review by Upadhyay et al. [-@upadhyay_role_2015] suggests leptin may exert both direct and indirect effects on bone. Directly, leptin receptors on chondrocytes and osteoblasts suggest that leptin may influence bone formation by binding to receptors and activating a signalling pathway to promote osteoblast differentiation and activity.  
+
+Indirectly, leptin influences bone metabolism via the central nervous system (CNS). It stimulates pro-opiomelanocortin (POMC) neurons while supressing agouti-related peptide (AgRP) and neuropeptide Y (NPY) neurons in the hypothalamus, which work concurrently to supress appetite and affect energy expenditure [@park_physiology_2015]. This allows leptin to control energy and hormone levels to maintain optimal bone health.  
+
+Leptin increases production of osteoblasts which increases the production of osteocalcin. Osteocalcin is a key regulator in bone metabolism and insulin sensitivity. Specifically, when leptin is increased, this stimulates the production of osteocalcin which triggers the release of insulin from the pancreas. This acts as a positive feedback loop for bone formation. Moreover, when released from adipose tissue, leptin increases serotonin production, leading to increased bone growth via enhanced osteoblast proliferation and reduced osteoclast activity.  
+
+Leptin also activates estrogen production via the hypothalamic-pituitary-gonadal axis. Leptin signals the hypothalamus to release gonadotropin releasing hormone (GnRH), which triggers the pituitary gland to secrete luteinising hormone (LH) and follicle stimulating hormone (FSH). The increase in these hormones results in the ovaries producing estrogen which in turn promotes the growth of osteoblasts while reducing cortisol levels to help mitigate the catabolic effects of cortisol on bone. All these factors make leptin an ideal biomarker to help identify athletes at risk of LEA and the associated effects on bone health. Murphy et al. [-@murphy_low_2021] suggested that decreases in leptin are greater in conditions of LEA compared to control. Each participant experienced three different conditions for five days, LEA and high protein, LEA and low protein or control. The decline in leptin in response to LEA over the five-day period was 54.3% ± 16.7%, 65.5% ± 4.4% and 25.4% ± 11.4% respectively. Although in a population of young, healthy males, this study highlights that LEA is associated with reductions in circulating leptin levels, which may have contributed to the shift from bone turnover to bone resorption although this has not been directly explored.  
+
+## Sex Difference sin Leptin Responses and Implications for Female Athletes
+
+When it comes to bone health, the consequences of LEA appear to be sex specific with female athletes experiencing more profound effects. Male athletes may be less affected partly because of lower energy demand for reproductive function [@papageorgiou_effects_2017] and the bone-protective effects of testosterone [@souza_2014_2014; @thomas_role_2001]. In a study by Papageorgiou et al. [-@papageorgiou_effects_2017] they examined the effects of LEA, induced through reduced dietary intake and exercise in physically active males and females. In males, there was no significant differences in bone turnover markers such as Procollagen type 1 N propeptide (P1NP) (p=0.12) and C-terminal β cross linked telopeptide of type 1 collagen (BCTX) (p=0.46) between restriction and control. Hormonal markers including insulin (p=0.40) and leptin (p=0.07) were also not significantly different in males in restricted compared to control. In females, they found significant changes in bone turnover markers, with P1NP significantly lower (p=0.01) and BCTX was significantly higher (p=0.03) in restriction compared to control conditions. The hormonal markers including insulin and leptin were also significantly reduced in females under the restricted condition (p=0.01). The findings suggest that in females in conditions of LEA, bone formation is decreased, and resorption is increased. Key hormonal markers were also heavily impacted. However, in males, LEA has a minimal impact on bone and hormonal markers, indicating their greater resilience to LEA. Supporting studies by Hickey et al. [-@hickey_gender-dependent_1997] and Dubac et al. [-@dubuc_changes_1998] show significant bone metabolism impacts from LEA in females but not in males. This suggests that LEA's detrimental effects on bone health may be sex-specific, necessitating a tailored approach to managing athletes at risk of LEA-related complications. 
+The impact of leptin in female athlete populations has not been extensively studied. Research on leptin replacement therapy in females with hypothalamic amenorrhea (HA) has shown promising results. Sienkiewicz et al. [-@sienkiewicz_long-term_2011] observed that Metreleptin, a leptin replacement, significantly improved bone mineral density (BMD) and bone mineral content (BMC) at the lumbar spine, along with increased IGF-1 and reduced cortisol levels. Given these outcomes, more research into leptin's role in female athletes, especially those prone to LEA and associated bone conditions, is recommended. 
+
+# Study Aims 
+
+There is limited understanding of the influence of nutrition on bone health in elite female athlete populations. The aim of this study is to investigate the physiological, physical, and nutritional characteristics of elite and highly trained female athletes based in Scotland, with a focus on bone health and nutrition-related factors to gain a better understanding of the female athlete. A wide range of factors will be explored to determine what, if any, future interventions may optimise bone health and overall performance among this population. 
+
+## Study Objectives 
+
+1. To produce high-quality female-specific data through a more comprehensive and tailored approach to research, ultimately contributing to a more robust understanding of the unique physiological considerations in female athletes living in Scotland.  
+
+2. Evaluate the impact of micronutrient intake, with a specific focus on vitamin D, on bone health in female athletes. Through a comprehensive analysis of dietary patterns and serum micronutrient levels, the objective is to discern any significant associations between specific micronutrient profiles and markers of bone health, providing valuable insights into potential nutritional interventions for the prevention of bone injuries and conditions. 
+
+3. To assess the association between vitamin D intakes and reductions in negative menstrual cycle symptoms in female athletes  
+
+4. To explore the status of bone health in a population of female athletes using markers of bone formation/resorption and dual x-ray absorptiometry (DXA). 
+
+5. To examine the relationship between body composition and bone health status in female athletes using DXA. 
+ 
+6. Investigate the efficacy of bioelectrical impedance analysis (BIA) as a potential method of early detection and diagnosis of LEA.  
+ 
+7. To evaluate the impact of energy availability on bone health in female athletes by analysing data from weighted food diaries and energy expenditure assessments and exploring the association with BMD 
+ 
+8. To assess the prevalence of bone-related injuries and conditions among female athletes and explore potential risk factors using questionnaire data given at the baseline screening.  
+
+
+## Expected Outcomes 
+
+1. There is a significant association between vitamin D intake and bone health in female athletes, with adequate levels of vitamin D correlating with improved bone density and reduced markers of bone resorption.  
+
+2. Specific micronutrient profiles, particularly high intakes of calcium and vitamin D are significantly associated with positive markers of bone health, such as increased bone formation and decreased bone resorption, in female athletes 
+
+3. There will be a significant negative correlation between energy availability and markers of bone resorption in female athletes.  
+
+4. BIA is an effective and reliable method for early detection and diagnosis of LEA in female athletes, as evidenced by significant correlations between measurements of phase angle, body composition and clinical markers of LEA. 
+
+5. Body composition, specifically, low levels of fat mass in female athletes as measured by DXA, will correlate with reduced bone formation markers, increased bone resorption and decreased BMD.  
+
+6. Bone related injuries will be higher in female athlete populations with specific risk factors, including low fat mass, decreased leptin and LEA below 30kcal/kg/FFM.  
+
+# Materials and Methods 
+
+# References
+
+
+
+
 
