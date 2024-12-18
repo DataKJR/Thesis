@@ -200,6 +200,21 @@ There is limited understanding of the influence of nutrition on bone health in e
 
 # Materials and Methods 
 
+## Study Design 
+
+This study will be an observational repeated measures design with data collected from participants across a rolling 12-month period, as shown in Figure 1. Due to the seasonal nature of vitamin D synthesis participant visits will be separated by three months to ensure data collection occurs in all four UK seasons [@macdonald_sunlight_2011]
+
+![StrongHER Study Design](/Users/Katriona/Documents/Uni/PhD/Thesis/Thesis/studydesign.png)
+
+
+# Participants 
+
+Participants will be female, aged between >18 and <40 years. Participants will be defined as healthy as determined by a health screening questionnaire. No use of medication that could affect bone metabolism such as glucocorticoids (e.g., prednisone, cortisone). Participants exceeding the weight limit for the DXA scanner will be excluded (>204kg/450lbs). Further exclusion criteria include any females who are currently pregnant or participants who have breastfed within the last 12 months. Participants' training status will be classified using the criteria outlined by McKay et al. [-@mckay_defining_2021] with supporting classification provided. Participants will be Tier 3 (National level/highly trained) and above. Participants menstrual status will be reported in line with the tiering system proposed by Elliott-Sale et al. [-@elliott-sale_methodological_2021]. All participants will receive a participant information sheet via email and have a minimum of 24 hours to read through the information sheet. Participants will then be given the opportunity to ask questions prior to providing written informed consent. 
+
+# Ethics 
+
+Ethical approval was approved by the Energy, Geoscience, Infrastructure and Society Ethics Committee of Heriot Watt University (Dec 2024).  
+
 # References
 
 
